@@ -1,0 +1,14 @@
+---
+# Implement security enhancements
+
+- include: unattended_upgrades.yml
+  when: security_enable_feature_unattended_upgrades == true
+
+- include: sshd_config.yml
+  when: security_enable_feature_sshd_config == true
+
+- include: fail2ban.yml
+  when: security_enable_feature_fail2ban == true
+
+- include: ufw.yml
+  when: security_enable_feature_ufw == true

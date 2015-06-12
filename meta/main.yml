@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  description: Implements a number of steps to improve the security of a VM by configuration services and using security packages and firewalls 
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+      - trusty
+  categories:
+  - system
+
+armadillo_info:
+  name: Security
+  version: 0.1.0
+  source: git@stash.ceh.ac.uk:7999/barc/security.git
+  dependencies:
+    - git@stash.ceh.ac.uk:7999/barc/core.git#v1.0.0
+
+dependencies:
+  - core
